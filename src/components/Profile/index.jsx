@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+// import propTypes from 'prop-types';
 import styles from './style.module.css';
 // import user from '../../user/user.json';
 
@@ -48,18 +48,18 @@ const Profile = () => {
     )
 }
 
-Profile.propTypes = {
-    data: propTypes.shape({
-        username: propTypes.string,
-        tag: propTypes.string,
-        location: propTypes.string,
-        avatar: propTypes.string,
-        stats: propTypes.shape({
-            followers: propTypes.number,
-            views: propTypes.number,
-            likes: propTypes.number,
-        })
-    })
-}
+// Profile.propTypes = {
+//     data: propTypes.shape({
+//         username: propTypes.string,
+//         tag: propTypes.string,
+//         location: propTypes.string,
+//         avatar: propTypes.string,
+//         stats: propTypes.shape({
+//             followers: propTypes.number,
+//             views: propTypes.number,
+//             likes: propTypes.number,
+//         })
+//     })
+// }
 
 export default Profile;
