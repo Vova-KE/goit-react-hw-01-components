@@ -1,0 +1,24 @@
+.transactionHistory{
+    background-color: #fff;
+    width: 400px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.transactionTableHead{
+    background-color: #bada55;
+}
+
+.transactionTableRow:nth-child(odd){
+    background-color: #ccccc7
+}
+
+.transactionTableHeadCell{
+    padding: 5px;
+}
+
+.transactionTableCell{
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+}
