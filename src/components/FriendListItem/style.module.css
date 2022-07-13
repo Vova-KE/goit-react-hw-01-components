@@ -7,9 +7,10 @@
     border: 1px solid #757373;
     border-radius: 2px;
     box-shadow: 2px 2px 2px 1px #757373;
+    background-color: #fff;
 }
 
-.status{
+.statusOffline{
     background-color: red;
     width: 10px;
     height: 10px;
@@ -17,8 +18,12 @@
     margin-right: 10px;
 }
 
-.online{
+.statusOnline{
     background-color: green;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
 .avatar{

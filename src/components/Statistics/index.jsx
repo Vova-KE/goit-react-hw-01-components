@@ -1,18 +1,17 @@
 import propTypes from 'prop-types';
 import styles from './style.module.css';
-// import data from '../../data/data.json';
 import getRandomHexColor from '../color';
 
-const Statistics = ({items}) => {
+const Statistics = ({title, stats}) => {
     return (
-    <section className={styles.statistics}>
-        <h2 className={styles.title}>Upload stats</h2>
+        <section className={styles.statistics}>
+            {title && (<h2 className={styles.title}>{title}</h2>)}
 
             <ul className={styles.statList}>
-                {items.map((item) => (
-                    <li className={styles.item} key={item.id} style={{ backgroundColor: getRandomHexColor() }}>
-                    <span className={styles.label}>{item.label}</span>
-                    <span className={styles.percentage}>{item.percentage}%</span>
+                {stats.map((stat) => (
+                    <li className={styles.item} key={stat.id} style={{ backgroundColor: getRandomHexColor() }}>
+                    <span className={styles.label}>{stat.label}</span>
+                    <span className={styles.percentage}>{stat.percentage}%</span>
             </li>
                 ))}
         </ul>
@@ -21,7 +20,8 @@ const Statistics = ({items}) => {
 };
 
 Statistics.propTypes = {
-        items: propTypes.arrayOf(propTypes.shape({
+        title: propTypes.string,
+        stats: propTypes.arrayOf(propTypes.shape({
         id: propTypes.string,
         label: propTypes.string,
         percentage: propTypes.number,

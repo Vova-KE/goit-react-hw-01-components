@@ -1,20 +1,19 @@
 import propTypes from 'prop-types';
 import styles from './style.module.css';
-// import user from '../../user/user.json';
 import FriendListItem from '../FriendListItem'
 
-const FriendList = ({items}) => {
+const FriendList = ({friends}) => {
     return (
         <ul className={styles.friendList}>
-            {items.map((item) => (
-                <FriendListItem key={item.id} item={item} />
+            {friends.map((friend) => (
+                <FriendListItem key={friend.id} friend={friend} />
             ))}
         </ul>
     )
 }
 
 FriendList.propTypes = {
-        items: propTypes.arrayOf(propTypes.shape({
+        friends: propTypes.arrayOf(propTypes.shape({
             id: propTypes.number,
     }))
 }
