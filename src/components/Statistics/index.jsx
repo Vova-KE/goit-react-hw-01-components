@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import styles from './style.module.css';
 import getRandomHexColor from '../color';
 
@@ -20,11 +20,11 @@ const Statistics = ({title, stats}) => {
 };
 
 Statistics.propTypes = {
-        title: propTypes.string,
-        stats: propTypes.arrayOf(propTypes.shape({
-        id: propTypes.string,
-        label: propTypes.string,
-        percentage: propTypes.number,
+        title: PropTypes.string,
+        stats: PropTypes.arrayOf(PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        percentage: PropTypes.number.isRequired,
     }))
 }
 
